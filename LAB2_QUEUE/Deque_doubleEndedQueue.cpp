@@ -3,14 +3,14 @@
 using namespace std;
 
 template <class T>
-class CQueue
+class DQueue
 {
 private:
     T str[SIZE];
     int front, rear, count;
 
 public:
-    CQueue()
+    DQueue()
     {
         front = 0;
         rear = -1;
@@ -98,7 +98,7 @@ public:
 
 int main()
 {
-    CQueue<int> q;
+    DQueue<int> q;
     try
     {
 
