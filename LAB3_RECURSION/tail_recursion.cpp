@@ -1,23 +1,21 @@
 #include<iostream>
 using namespace std;
 
-int fibo ( int n, int a , int b  ) {
+int fibo_tail ( int n, int a = 0 , int b = 1 ) {
     if ( n == 0 ) 
         return a ; 
     else if (  n == 1 )
         return b ;   
     else 
-        return fibo(n-1 , b, a + b)  ;
+        return fibo_tail(n-1 , b, a + b)  ;
 }
-int fibo_tail(int n ){  return fibo( n , 0, 1 ); }
 
-int fact( int n , int a ) {
+int fact_tail( int n , int a = 1 ) {
     if ( n == 0 ) 
         return a; 
     else 
-        return fact( n-1 , n*a ) ;
+        return fact_tail( n-1 , n*a ) ;
 }     
-int fact_tail(int n ){  return fact( n , 1 ); }
 
 int main()
 {
